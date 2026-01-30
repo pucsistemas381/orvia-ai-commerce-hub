@@ -104,7 +104,7 @@ const HeroSection = () => {
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
-          }} src="/lovable-uploads/be4ff7fb-450c-45d1-8fbb-1e14a90d91d0.png" />
+          }} src="/lovable-uploads/cc08f24f-978d-4f55-82da-e1e65c5d6edc.png" />
           </motion.div>
         </div>
       </div>
