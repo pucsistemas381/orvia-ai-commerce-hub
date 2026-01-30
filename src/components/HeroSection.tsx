@@ -95,7 +95,7 @@ const HeroSection = () => {
             <motion.img
               src={orviaLogo}
               alt="Orvia Logo"
-              className="relative z-10 w-full max-w-lg float-animation"
+              className="relative z-10 w-full max-w-lg float-animation mix-blend-screen"
               animate={{
                 scale: [1, 1.02, 1],
               }}
