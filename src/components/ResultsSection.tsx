@@ -110,7 +110,7 @@ const ResultsSection = () => {
       }} className="glass-card p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-3xl font-bold">TS</div>
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-3xl font-bold">Thiago</div>
             </div>
             <div className="text-center md:text-left">
               <p className="text-lg md:text-xl text-foreground mb-4 italic">
