@@ -72,18 +72,7 @@ const HeroSection = () => {
             </div>
 
             {/* Trust Badges */}
-            <motion.div initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            delay: 0.6
-          }} className="mt-12 pt-8 border-t border-border/50">
-              <p className="text-sm text-muted-foreground mb-4">Empresas que confiam na Orvia</p>
-              <div className="flex items-center gap-8 opacity-60">
-                {[1, 2, 3, 4].map(i => <div key={i} className="w-20 h-8 bg-muted rounded" />)}
-              </div>
-            </motion.div>
+            
           </motion.div>
 
           {/* Hero Image */}
