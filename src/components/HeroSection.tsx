@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroArrow from '@/assets/orvia-arrow-3d.png';
+import orviaLogo from '@/assets/orvia-logo.jpeg';
 
 const HeroSection = () => {
   return (
@@ -93,14 +93,14 @@ const HeroSection = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-accent/10 rounded-full blur-3xl" />
             <motion.img
-              src={heroArrow}
-              alt="Orvia 3D Arrow"
-              className="relative z-10 w-full max-w-md float-animation"
+              src={orviaLogo}
+              alt="Orvia Logo"
+              className="relative z-10 w-full max-w-lg float-animation"
               animate={{
-                rotateY: [0, 10, 0, -10, 0],
+                scale: [1, 1.02, 1],
               }}
               transition={{
-                duration: 8,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
