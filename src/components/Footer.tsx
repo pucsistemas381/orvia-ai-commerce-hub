@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Youtube, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
+import ScrollReveal from '@/components/ScrollReveal';
 
 const Footer = () => {
   const footerLinks = {
@@ -19,11 +20,11 @@ const Footer = () => {
   return (
     <footer className="relative pt-20 pb-10 border-t border-border/50">
       <div className="absolute inset-0 cosmic-bg opacity-50" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
+          <ScrollReveal animation="fade-right" className="lg:col-span-2">
             <a href="#" className="inline-block mb-6">
               <span className="font-display text-3xl font-bold gradient-text">Orvia</span>
             </a>
@@ -43,11 +44,11 @@ const Footer = () => {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+          {Object.entries(footerLinks).map(([category, links], index) => (
+            <ScrollReveal key={category} animation="fade-up" delay={index * 0.1}>
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
@@ -61,27 +62,29 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Orvia. Todos os direitos reservados.
-          </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Termos
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacidade
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Cookies
-            </a>
+        <ScrollReveal animation="fade-up" delay={0.3}>
+          <div className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2024 Orvia. Todos os direitos reservados.
+            </p>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Termos
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Privacidade
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Cookies
+              </a>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </footer>
   );
