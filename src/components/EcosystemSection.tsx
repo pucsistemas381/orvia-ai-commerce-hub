@@ -40,10 +40,11 @@ const EcosystemSection = () => {
   return (
     <section ref={ref} id="ecossistema" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 cosmic-bg" />
+      <div className="absolute inset-0 hex-pattern opacity-20" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-1/2 left-0 w-1/2 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      <div className="absolute top-1/2 right-0 w-1/2 h-px bg-gradient-to-l from-transparent via-accent/30 to-transparent" />
+      {/* Data stream lines */}
+      <div className="absolute top-0 left-1/3 w-px h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent" />
+      <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-accent/10 to-transparent" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -52,7 +53,13 @@ const EcosystemSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block text-primary font-medium mb-4">OS 3 PILARES</span>
+          <motion.span 
+            className="inline-block neon-card px-4 py-1.5 rounded-full text-primary font-medium mb-4 text-sm holo-shimmer"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+          >
+            OS 3 PILARES
+          </motion.span>
           <h2 className="section-title font-display mb-4">
             Ecossistema <span className="gradient-text-accent">Comercial Integrado</span>
           </h2>
@@ -71,13 +78,15 @@ const EcosystemSection = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group relative"
             >
-              <div className="glass-card-hover h-full p-8 relative overflow-hidden">
+              <div className="neon-card h-full p-8 relative overflow-hidden transition-all duration-300 holo-shimmer">
                 {/* Gradient Overlay on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
-                {/* Icon */}
+                {/* Top accent line */}
+                <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${pillar.gradient} opacity-50`} />
+
                 <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <span className="text-3xl">{pillar.emoji}</span>
                   </div>
 
@@ -85,7 +94,6 @@ const EcosystemSection = () => {
                   <p className="text-primary font-medium text-sm mb-4">{pillar.subtitle}</p>
                   <p className="text-muted-foreground mb-6">{pillar.description}</p>
 
-                  {/* Features List */}
                   <ul className="space-y-3">
                     {pillar.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3 text-sm">
@@ -95,7 +103,6 @@ const EcosystemSection = () => {
                     ))}
                   </ul>
 
-                  {/* Learn More */}
                   <motion.a
                     href="#"
                     className="inline-flex items-center gap-2 mt-6 text-primary font-medium group/link"
@@ -107,7 +114,7 @@ const EcosystemSection = () => {
                 </div>
               </div>
 
-              {/* Connection Lines (hidden on mobile) */}
+              {/* Connection Lines */}
               {index < pillars.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-px">
                   <motion.div
