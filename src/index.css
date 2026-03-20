@@ -193,4 +193,117 @@
       linear-gradient(to bottom, hsl(199 89% 48% / 0.05) 1px, transparent 1px);
     background-size: 60px 60px;
   }
+
+  /* Aurora Glow */
+  .aurora-glow {
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(199 89% 48% / 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 30% 0%, hsl(186 78% 48% / 0.1), transparent),
+      radial-gradient(ellipse 60% 40% at 70% 0%, hsl(280 80% 60% / 0.06), transparent);
+  }
+
+  /* Scanline overlay */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(199 89% 48% / 0.015) 2px,
+      hsl(199 89% 48% / 0.015) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Neon card */
+  .neon-card {
+    @apply relative bg-[var(--glass-bg)] backdrop-blur-xl border border-primary/15 rounded-2xl;
+    box-shadow: 
+      0 0 15px hsl(199 89% 48% / 0.07),
+      inset 0 1px 0 hsl(199 89% 48% / 0.1);
+  }
+
+  .neon-card:hover {
+    border-color: hsl(199 89% 48% / 0.35);
+    box-shadow: 
+      0 0 30px hsl(199 89% 48% / 0.12),
+      inset 0 1px 0 hsl(199 89% 48% / 0.15);
+  }
+
+  /* Holographic shimmer */
+  .holo-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .holo-shimmer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 40%,
+      hsl(199 89% 48% / 0.06) 45%,
+      hsl(38 92% 50% / 0.04) 50%,
+      transparent 55%
+    );
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Hex grid pattern */
+  .hex-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='52' viewBox='0 0 60 52' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill='none' stroke='%230ea5e9' stroke-opacity='0.04' stroke-width='0.5'/%3E%3C/svg%3E");
+    background-size: 60px 52px;
+  }
+
+  /* Data stream line */
+  .data-stream {
+    position: relative;
+  }
+  
+  .data-stream::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      hsl(199 89% 48% / 0.3) 30%,
+      hsl(199 89% 48% / 0.3) 70%,
+      transparent 100%
+    );
+  }
+
+  /* Typing cursor */
+  .typing-cursor::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: hsl(199 89% 48%);
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Orbit ring */
+  .orbit-ring {
+    border: 1px solid hsl(199 89% 48% / 0.1);
+    border-radius: 50%;
+    animation: orbit-spin 20s linear infinite;
+  }
+
+  @keyframes orbit-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
 }
