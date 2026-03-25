@@ -44,7 +44,7 @@
     --gradient-cosmic: radial-gradient(ellipse at 50% 0%, hsl(199 89% 48% / 0.15) 0%, transparent 50%);
     
     --glow-primary: 0 0 40px hsl(199 89% 48% / 0.4);
-    --glow-accent: 0 0 30px hsl(38 92% 50% / 0.3);
+    --glow-accent: 0 0 30px hsl(210 80% 55% / 0.3);
     
     --glass-bg: hsl(222 47% 8% / 0.6);
     --glass-border: hsl(217 33% 25% / 0.3);
