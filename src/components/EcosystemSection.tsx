@@ -29,7 +29,7 @@ const pillars = [
     subtitle: 'Retenção e upsell',
     description: 'Identifica oportunidades de upsell e previne churn antes que aconteça.',
     features: ['Previsão de churn', 'Recomendações de upsell', 'NPS automatizado'],
-    gradient: 'from-accent to-orange-400',
+    gradient: 'from-blue-500 to-indigo-400',
   },
 ];
 
