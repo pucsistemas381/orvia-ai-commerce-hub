@@ -134,7 +134,7 @@
   }
 
   .btn-accent {
-    @apply relative overflow-hidden bg-gradient-to-r from-accent to-orange-400 text-accent-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[var(--glow-accent)] hover:scale-105;
+    @apply relative overflow-hidden bg-gradient-to-r from-accent to-blue-400 text-accent-foreground font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-[var(--glow-accent)] hover:scale-105;
   }
 
   .btn-outline {
