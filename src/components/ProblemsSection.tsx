@@ -1,5 +1,6 @@
 import { Users, TrendingDown, DollarSign } from 'lucide-react';
-import dashboardImg from '@/assets/dashboard-3d.png';
+import { motion } from 'framer-motion';
+import phoneImg from '@/assets/phone-ai-chat.png';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const problems = [
@@ -65,15 +66,50 @@ const ProblemsSection = () => {
           </p>
         </ScrollReveal>
 
-        {/* Dashboard Preview */}
-        <ScrollReveal animation="fade-up" delay={0.3} className="relative max-w-4xl mx-auto">
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
-          <div className="glass-card p-2 rounded-3xl overflow-hidden pulse-glow">
-            <img
-              src={dashboardImg}
-              alt="Dashboard de Automação"
-              className="w-full rounded-2xl"
-            />
+        {/* Phone Mockup */}
+        <ScrollReveal animation="fade-up" delay={0.3} className="relative flex justify-center">
+          <div className="relative group">
+            {/* Glow behind phone */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/20 blur-[80px] rounded-full scale-75 group-hover:scale-95 transition-transform duration-700" />
+            
+            <motion.div
+              initial={{ opacity: 0, y: 80, rotate: -8 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -8 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ rotate: 0, scale: 1.05 }}
+              className="transition-transform duration-500"
+            >
+              <img
+                src={phoneImg}
+                alt="Celular mostrando atendimento de leads com IA humanizada da Orvia"
+                loading="lazy"
+                width={500}
+                height={625}
+                className="relative z-10 w-[320px] md:w-[420px] lg:w-[500px] drop-shadow-[0_20px_60px_rgba(59,130,246,0.3)]"
+              />
+            </motion.div>
+
+            {/* Floating notification badges */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="absolute top-1/4 -left-4 md:-left-16 z-20 neon-card px-4 py-2 rounded-xl holo-shimmer"
+            >
+              <p className="text-xs md:text-sm font-medium text-primary">🤖 IA Ativa 24/7</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1, duration: 0.6 }}
+              className="absolute bottom-1/3 -right-4 md:-right-20 z-20 neon-card px-4 py-2 rounded-xl holo-shimmer"
+            >
+              <p className="text-xs md:text-sm font-medium text-primary">✅ Lead Qualificado</p>
+            </motion.div>
           </div>
         </ScrollReveal>
       </div>
