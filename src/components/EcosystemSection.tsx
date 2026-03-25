@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Target, Calendar, RefreshCw, ArrowRight } from 'lucide-react';
+import phoneImg from '@/assets/phone-ai-chat.png';
 
 const pillars = [
   {
