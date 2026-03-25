@@ -1,5 +1,6 @@
 import { Users, TrendingDown, DollarSign } from 'lucide-react';
-import dashboardImg from '@/assets/dashboard-3d.png';
+import { motion } from 'framer-motion';
+import phoneImg from '@/assets/phone-ai-chat.png';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const problems = [
