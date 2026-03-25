@@ -128,6 +128,27 @@ const EcosystemSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Phone Mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 60, rotate: -5 }}
+          animate={isInView ? { opacity: 1, y: 0, rotate: -5 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 flex justify-center"
+        >
+          <div className="relative group">
+            {/* Glow effect behind phone */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/20 blur-3xl rounded-full scale-75 group-hover:scale-90 transition-transform duration-700" />
+            <img
+              src={phoneImg}
+              alt="Celular mostrando atendimento de leads com IA humanizada da Orvia"
+              loading="lazy"
+              width={400}
+              height={500}
+              className="relative z-10 drop-shadow-2xl hover:rotate-0 transition-transform duration-500"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
