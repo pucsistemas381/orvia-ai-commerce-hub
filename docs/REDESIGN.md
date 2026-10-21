@@ -47,7 +47,7 @@ O build emite a página do Retoma como diretório estático, compatível com o s
 
 ## Performance e acessibilidade
 
-Sem novas dependências de aplicação. Foram removidos da home canvas de partículas, animações contínuas, imagens pesadas de IA e fontes buscadas remotamente. A composição do hero usa CSS e SVGs. O JavaScript de produção passou de aproximadamente 462 kB para 336 kB (147 kB para 107 kB gzip) neste ambiente. Core Web Vitals de usuários reais dependem de medição após publicação.
+Sem novas dependências de aplicação. Foram removidos da home canvas de partículas, animações contínuas, imagens pesadas de IA e fontes buscadas remotamente. A composição do hero usa CSS e SVGs. O JavaScript de produção passou de aproximadamente 462 kB para 347 kB (147 kB para 110 kB gzip) neste ambiente. Core Web Vitals de usuários reais dependem de medição após publicação.
 
 Incluídos skip link, foco visível, menu acionável por teclado, labels, contraste revisado e suporte a prefers-reduced-motion. Layout e navegação foram exercitados com Chromium em 1440, 768, 390 e 320 px, sem overflow horizontal nem erros de console. Não há garantia de conformidade completa com WCAG apenas por testes automatizados.
 
@@ -62,4 +62,8 @@ Não foram criados links sociais fictícios nem páginas legais provisórias.
 
 ## Identidade visual original
 
-A revisão visual utiliza os arquivos originais de marca existentes em `public/lovable-uploads`: `bbc59210-47ba-46d0-982a-48ce9045a3da.png` (logotipo completo) e `cc08f24f-978d-4f55-82da-e1e65c5d6edc.png` (símbolo). Os arquivos não foram redesenhados nem alterados. Header, hero, seção institucional, footer, favicon e metadados usam a identidade original. A interface mantém fundo azul profundo, ciano e luz discreta; a assinatura institucional acompanha a referência fornecida.
+A revisão visual utiliza os arquivos originais de marca existentes em `public/lovable-uploads`: `bbc59210-47ba-46d0-982a-48ce9045a3da.png` (logotipo completo) e `cc08f24f-978d-4f55-82da-e1e65c5d6edc.png` (símbolo). Os arquivos não foram redesenhados nem alterados. Header, hero, seção institucional, footer, favicon e metadados usam a identidade original. As versões WebP em `public/brand` têm pixels RGBA idênticos aos originais, com compressão sem perda. A interface mantém fundo azul profundo, ciano e luz discreta; a assinatura institucional acompanha a referência fornecida.
+
+## Evolução de UX e conversão
+
+A home inclui um seletor de desafios com recomendações, CTAs contextuais de WhatsApp, FAQ nativo acessível, ecossistema com links reais e contato mobile que aparece após o CTA principal sair da tela. Detalhes de implementação e auditoria em [UX-MARKETING.md](UX-MARKETING.md).

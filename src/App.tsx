@@ -9,6 +9,7 @@ import Retoma from "./pages/Retoma";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PageEffects from "./components/institutional/PageEffects";
+import ExperienceEnhancements from "./components/institutional/ExperienceEnhancements";
 
 const queryClient = new QueryClient();
 
@@ -25,7 +26,7 @@ const App = () => (
           Pular para o conteúdo
         </a>
         <Header />
-        <main id="conteudo">
+        <main id="conteudo" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/produtos/retoma" element={<Retoma />} />
@@ -34,6 +35,7 @@ const App = () => (
           </Routes>
         </main>
         <Footer />
+        <ExperienceEnhancements />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

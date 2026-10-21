@@ -1,15 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { conversationUrl } from "@/data/marketing";
 export function Brand() {
   return (
     <span className="brand-asset">
-      <img
-        src="/lovable-uploads/bbc59210-47ba-46d0-982a-48ce9045a3da.png"
-        alt="Orvia"
-        width="814"
-        height="814"
-      />
+      <img src="/brand/orvia-logo.webp" alt="Orvia" width="820" height="820" />
     </span>
   );
 }
@@ -61,10 +57,13 @@ export default function Navigation() {
               {name}
             </Link>
           ))}
-          <Link className="header-cta" to="/#contato">
+          <a
+            className="header-cta"
+            href={conversationUrl("tecnologia para minha empresa")}
+          >
             Falar com um especialista
             <ArrowUpRight size={15} />
-          </Link>
+          </a>
         </nav>
       </div>
     </header>

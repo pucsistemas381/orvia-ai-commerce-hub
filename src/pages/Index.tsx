@@ -1,13 +1,9 @@
 import {
   ArrowDown,
   ArrowUpRight,
-  Blocks,
   Check,
-  Code2,
   Database,
-  Network,
   Sparkles,
-  Workflow,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { pillars, products, solutions, journey } from "@/data/company";
@@ -17,61 +13,12 @@ import {
   SectionHeader,
   SolutionCard,
 } from "@/components/institutional/Primitives";
-import { Brand } from "@/components/Header";
+import EcosystemVisual from "@/components/institutional/EcosystemVisual";
+import ChallengeFinder from "@/components/institutional/ChallengeFinder";
+import FaqSection from "@/components/institutional/FaqSection";
+import { conversationUrl } from "@/data/marketing";
 import ContactSection from "@/components/institutional/ContactSection";
 
-function EcosystemVisual() {
-  return (
-    <div
-      className="ecosystem-visual"
-      role="img"
-      aria-label="Orvia conecta produtos, inteligência e soluções a processos, dados e pessoas"
-    >
-      <div className="visual-grid" />
-      <div className="orbit orbit-one" />
-      <div className="orbit orbit-two" />
-      <div className="visual-label">
-        UM ECOSSISTEMA. MÚLTIPLAS POSSIBILIDADES.
-      </div>
-      <div className="core">
-        <Brand />
-      </div>
-      <div className="satellite sat-products">
-        <Blocks />
-        <div>
-          <strong>Products</strong>
-          <span>Software proprietário</span>
-        </div>
-        <span className="node-dot" />
-      </div>
-      <div className="satellite sat-intelligence">
-        <Sparkles />
-        <div>
-          <strong>Intelligence</strong>
-          <span>Inteligência aplicada</span>
-        </div>
-        <span className="node-dot" />
-      </div>
-      <div className="satellite sat-solutions">
-        <Code2 />
-        <div>
-          <strong>Solutions</strong>
-          <span>Engenharia de soluções</span>
-        </div>
-        <span className="node-dot" />
-      </div>
-      <div className="data-chip chip-one">
-        <Database size={14} /> Dados & processos
-      </div>
-      <div className="data-chip chip-two">
-        <Network size={14} /> Pessoas & oportunidades
-      </div>
-      <div className="visual-bottom">
-        <span className="status-dot" /> TECNOLOGIA CONECTADA AO SEU NEGÓCIO
-      </div>
-    </div>
-  );
-}
 export default function Index() {
   return (
     <>
@@ -92,25 +39,27 @@ export default function Index() {
               eficiência e crescer de forma sustentável.
             </p>
             <div className="actions">
-              <PrimaryCTA to="/#solucoes">Conheça nossas soluções</PrimaryCTA>
-              <PrimaryCTA to="/#ecossistema" secondary>
-                Explore nosso ecossistema
+              <PrimaryCTA to={conversationUrl("tecnologia para minha empresa")}>
+                Falar sobre minha empresa
+              </PrimaryCTA>
+              <PrimaryCTA to="/#solucoes" secondary>
+                Encontre sua solução
               </PrimaryCTA>
             </div>
-            <div className="hero-footnote">
-              <span>SOFTWARE PRÓPRIO</span>
-              <span>INTELIGÊNCIA APLICADA</span>
-              <span>SOLUÇÕES SOB MEDIDA</span>
-            </div>
+            <p className="hero-assurance">
+              Uma conversa sobre o seu negócio. Tecnologia na direção certa.
+            </p>
           </div>
           <EcosystemVisual />
         </div>
         <div className="wrap hero-bottom">
-          <span>O próximo passo da sua empresa começa aqui.</span>
+          <span className="hero-bottom-caption">
+            <span className="status-dot" /> SOFTWARE · INTELIGÊNCIA · SOLUÇÕES
+          </span>
           <a href="#ecossistema" aria-label="Ir para o ecossistema">
             <ArrowDown size={18} />
           </a>
-          <span>ORVIA TECH / CONECTANDO POSSIBILIDADES</span>
+          <span>TRANSFORMANDO TECNOLOGIA EM DIREÇÃO ESTRATÉGICA</span>
         </div>
       </section>
       <section className="section wrap" id="ecossistema">
@@ -125,6 +74,7 @@ export default function Index() {
               to={p.href}
               className={`pillar pillar-${p.tone}`}
               key={p.name}
+              data-reveal
             >
               <div className="pillar-top">
                 <Icon size={26} />
@@ -165,6 +115,11 @@ export default function Index() {
             tecnologia que faz sentido para sua operação.
           </p>
         </div>
+        <ChallengeFinder />
+        <div className="solutions-intro">
+          <span className="eyebrow">CAPACIDADES QUE SE COMPLEMENTAM</span>
+          <p>Uma visão integrada. Diferentes formas de avançar.</p>
+        </div>
         <div className="solutions-grid">
           {solutions.map((s, i) => (
             <SolutionCard key={s.title} solution={s} index={i} />
@@ -173,7 +128,7 @@ export default function Index() {
       </section>
       <section className="intelligence-section" id="tecnologia">
         <div className="wrap two-column">
-          <div className="intelligence-art" aria-hidden="true">
+          <div className="intelligence-art" aria-hidden="true" data-reveal>
             <div className="flow-node">
               <Database />
               Dados da operação
@@ -231,7 +186,7 @@ export default function Index() {
           title="Da complexidade à eficiência."
           text="Uma abordagem que conecta o contexto do negócio às possibilidades da tecnologia."
         />
-        <ol className="journey">
+        <ol className="journey" data-reveal>
           {journey.map((step, i) => (
             <li key={step.title}>
               <span className="step-index">0{i + 1}</span>
@@ -248,7 +203,7 @@ export default function Index() {
             title="Inovação que faz sentido para o negócio."
             text="Quando processos deixam de trabalhar isolados, novas possibilidades aparecem. A equipe ganha contexto, a operação ganha clareza e o negócio encontra espaço para evoluir."
           />
-          <div className="outcomes">
+          <div className="outcomes" data-reveal>
             {[
               "Mais produtividade",
               "Processos conectados",
@@ -267,12 +222,12 @@ export default function Index() {
         </div>
       </section>
       <section className="section wrap about-section" id="sobre">
-        <div className="about-identity" aria-hidden="true">
+        <div className="about-identity" aria-hidden="true" data-reveal>
           <img
-            src="/lovable-uploads/cc08f24f-978d-4f55-82da-e1e65c5d6edc.png"
+            src="/brand/orvia-symbol.webp"
             alt=""
-            width="426"
-            height="426"
+            width="424"
+            height="439"
             loading="lazy"
           />
         </div>
@@ -297,6 +252,7 @@ export default function Index() {
           </span>
         </div>
       </section>
+      <FaqSection />
       <ContactSection />
     </>
   );
