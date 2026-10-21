@@ -3,11 +3,13 @@ import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 export function Brand() {
   return (
-    <span className="brand">
-      <span className="brand-symbol" aria-hidden="true">
-        o<span />
-      </span>
-      orvia<span className="brand-tech">TECH</span>
+    <span className="brand-asset">
+      <img
+        src="/lovable-uploads/bbc59210-47ba-46d0-982a-48ce9045a3da.png"
+        alt="Orvia"
+        width="814"
+        height="814"
+      />
     </span>
   );
 }

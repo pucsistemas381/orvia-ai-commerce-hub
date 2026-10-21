@@ -59,3 +59,7 @@ Incluídos skip link, foco visível, menu acionável por teclado, labels, contra
 - Confirmar o domínio definitivo antes da publicação.
 
 Não foram criados links sociais fictícios nem páginas legais provisórias.
+
+## Identidade visual original
+
+A revisão visual utiliza os arquivos originais de marca existentes em `public/lovable-uploads`: `bbc59210-47ba-46d0-982a-48ce9045a3da.png` (logotipo completo) e `cc08f24f-978d-4f55-82da-e1e65c5d6edc.png` (símbolo). Os arquivos não foram redesenhados nem alterados. Header, hero, seção institucional, footer, favicon e metadados usam a identidade original. A interface mantém fundo azul profundo, ciano e luz discreta; a assinatura institucional acompanha a referência fornecida.

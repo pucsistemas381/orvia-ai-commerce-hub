@@ -1862,3 +1862,367 @@ p {
 .retoma-word > span {
   font-size: 9px;
 }
+
+/* Identidade Orvia: ativos originais, azul profundo e luz ciano. */
+:root {
+  --background: 224 68% 5%;
+  --foreground: 210 55% 96%;
+  --card: 220 56% 9%;
+  --card-foreground: 210 55% 96%;
+  --popover: 220 56% 9%;
+  --popover-foreground: 210 55% 96%;
+  --primary: 194 95% 55%;
+  --primary-foreground: 224 68% 5%;
+  --secondary: 219 42% 15%;
+  --secondary-foreground: 210 55% 96%;
+  --muted: 219 42% 15%;
+  --muted-foreground: 214 28% 72%;
+  --border: 215 39% 23%;
+  --input: 215 39% 23%;
+  --ring: 190 95% 61%;
+}
+body {
+  background: #030919;
+  color: #edf5ff;
+}
+p,
+.section-heading p,
+p.lead {
+  color: #a6bad4;
+}
+.eyebrow {
+  color: #67d9ef;
+}
+.brand-asset {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 148px;
+  aspect-ratio: 550 / 220;
+  flex-shrink: 0;
+}
+.brand-asset img {
+  position: absolute;
+  width: 148%;
+  max-width: none;
+  height: auto;
+  left: -18.18%;
+  top: -97.7%;
+}
+.site-header {
+  background: #030919f5;
+  border-bottom-color: #1a3452;
+}
+.site-footer {
+  background: #020614;
+}
+.hero {
+  background: #020817;
+}
+.hero:before {
+  background:
+    radial-gradient(ellipse at 78% 48%, #0067c52b, transparent 58%),
+    radial-gradient(ellipse at 18% 10%, #0b2d5c40, transparent 50%);
+}
+.hero h1 > span {
+  color: #65d5f7;
+}
+.hero .action,
+.action {
+  background: linear-gradient(115deg, #0868da, #066ba9);
+  border-color: #268cd6;
+  color: #fff;
+  box-shadow: 0 4px 18px #008cdb18;
+}
+.action:hover,
+.hero .action:hover {
+  background: #086fbb;
+  border-color: #57d8f4;
+}
+.action-secondary,
+.hero .action-secondary {
+  background: transparent;
+  color: #c4e4f5;
+  border-color: #31516f;
+  box-shadow: none;
+}
+.action-secondary:hover,
+.hero .action-secondary:hover {
+  background: #102a46;
+}
+.hero-bottom {
+  border-top-color: #173451;
+}
+.hero-footnote,
+.hero-bottom,
+.visual-label,
+.visual-bottom {
+  color: #9bb5d6;
+}
+.visual-grid {
+  background-image:
+    linear-gradient(#1fbfff10 1px, transparent 1px),
+    linear-gradient(90deg, #1fbfff10 1px, transparent 1px);
+}
+.orbit {
+  border-color: #28baff38;
+}
+.orbit-two {
+  border-color: #2172b659;
+}
+.core {
+  background: radial-gradient(circle at 45% 30%, #0c3662, #051127 75%);
+  border-color: #20c4ef66;
+  box-shadow:
+    0 0 0 12px #1db2ff05,
+    0 0 65px #0091df22;
+}
+.core .brand-asset {
+  width: 126px;
+}
+.satellite {
+  background: #071a32;
+  border-color: #225578;
+  box-shadow: 0 12px 35px #0004;
+}
+.satellite > svg,
+.sat-intelligence > svg,
+.sat-solutions > svg {
+  color: #63d8f3;
+}
+.satellite div > span {
+  color: #a0bbd7;
+}
+.node-dot,
+.hero-kicker > span,
+.status-dot {
+  background: #58e2fa;
+  box-shadow: 0 0 10px #38c8f5a6;
+}
+.data-chip {
+  background: #061429;
+  border-color: #1e4264;
+  color: #a0c4e0;
+}
+.section-tinted {
+  background: #061125;
+  border-color: #162b48;
+}
+.pillar {
+  background: linear-gradient(145deg, #0a2541, #071225 70%);
+  border-color: #203e5d;
+}
+.pillar-violet {
+  background: linear-gradient(145deg, #0c2044, #071225 70%);
+}
+.pillar-teal {
+  background: linear-gradient(145deg, #082a38, #071225 70%);
+}
+.pillar:hover {
+  border-color: #43b8ea;
+}
+.pillar-top,
+.pillar-violet .pillar-top,
+.pillar-teal .pillar-top {
+  color: #5ecded;
+}
+.pillar-top > span,
+.pillar-brand {
+  color: #a0b8d5;
+}
+.pillar p {
+  color: #9eb5d0;
+}
+.text-link,
+.pillar-violet .text-link,
+.pillar-teal .text-link {
+  color: #6cdbf4;
+}
+.product-feature {
+  background: #07172d;
+  border-color: #23405f;
+}
+.product-tag,
+.retoma-word > span {
+  color: #9fb8d5;
+}
+.retoma-word {
+  color: #74ddf6;
+}
+.benefit-list li {
+  color: #b3c7df;
+}
+.benefit-list svg {
+  color: #66d5ef;
+}
+.product-diagram {
+  background: #071020;
+  border-color: #24516f;
+  box-shadow: 0 16px 45px #0003;
+}
+.diagram-top {
+  border-color: #1d3854;
+}
+.diagram-top > span:first-child {
+  color: #70d8f1;
+}
+.diagram-top > span:last-child,
+.diagram-caption,
+.product-diagram p.concept-label {
+  color: #99b4d1;
+}
+.opportunity {
+  background: #0c1b31;
+  border-color: #223e5b;
+}
+.opportunity-number {
+  background: #103451;
+  color: #77d9f3;
+}
+.opportunity div > span {
+  color: #9db7d1;
+}
+.opportunity > svg {
+  color: #76d9cb;
+}
+.solutions-grid {
+  border-color: #243c59;
+}
+.solution-card {
+  border-color: #243c59;
+}
+.solution-card:hover {
+  background: #0a1d33;
+}
+.solution-top {
+  color: #5bcbea;
+}
+.solution-top > span {
+  color: #a0b8d5;
+}
+.intelligence-section {
+  background: #061226;
+  border-block: 1px solid #193a58;
+}
+.intelligence-section .eyebrow {
+  color: #69d9ef;
+}
+.flow-center {
+  background: #0b3351;
+  border-color: #2388b7;
+  box-shadow: 0 0 35px #00b5ed16;
+}
+.flow-node > svg {
+  color: #67d9ef;
+}
+.journey .step-index {
+  color: #6ddaf5;
+  border-color: #294b6e;
+}
+.step-index:before {
+  background: #6bdcf6;
+  box-shadow: 0 0 10px #25c3e955;
+}
+.results-section {
+  background: #061326;
+  border-color: #19314b;
+}
+.outcomes > div {
+  border-color: #25405d;
+}
+.outcomes > div > span,
+.outcomes svg {
+  color: #94bcde;
+}
+.about-identity {
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  margin: auto;
+  position: relative;
+  background: radial-gradient(circle, #07375c80, transparent 68%);
+}
+.about-identity:before {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border: 1px solid #2b8bd333;
+  border-radius: 50%;
+}
+.about-identity img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  filter: drop-shadow(0 0 22px #00b6f52b);
+}
+.about-signature > span {
+  color: #a3bad4;
+}
+.contact-section {
+  background:
+    radial-gradient(ellipse at 85% 30%, #05699455, transparent 58%), #06244a;
+  border-top: 1px solid #176088;
+}
+.contact-section .eyebrow {
+  color: #79e5f5;
+}
+.contact-section .action {
+  background: #d5f7ff;
+  color: #073758;
+  border-color: #9aeeff;
+}
+.contact-section .action:hover {
+  background: #fff;
+}
+.contact-section .action-secondary {
+  background: transparent;
+  color: #d5e2fa;
+  border-color: #ffffff3d;
+}
+.contact-section .action-secondary:hover {
+  background: #ffffff10;
+}
+.contact-arrow {
+  color: #6eddf7;
+  border-color: #3387a6;
+}
+.footer-note,
+.footer-bottom {
+  color: #94aac9;
+}
+.back-link {
+  color: #a4c6e4;
+}
+.retoma-benefits article {
+  background: #081a30;
+  border-color: #23425f;
+}
+.retoma-benefits svg,
+.product-flow span,
+.product-flow svg {
+  color: #77d9f3;
+}
+.product-flow li {
+  border-color: #2b4f72;
+}
+@media (max-width: 900px) {
+  .navigation {
+    background: #041126;
+    border-color: #24516f;
+  }
+}
+@media (max-width: 640px) {
+  .brand-asset {
+    width: 132px;
+  }
+  .core .brand-asset {
+    width: 108px;
+  }
+  .about-identity {
+    width: 230px;
+  }
+}
+@media (max-width: 640px) {
+  .sat-intelligence {
+    top: 110px;
+  }
+}

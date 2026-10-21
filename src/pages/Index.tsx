@@ -17,6 +17,7 @@ import {
   SectionHeader,
   SolutionCard,
 } from "@/components/institutional/Primitives";
+import { Brand } from "@/components/Header";
 import ContactSection from "@/components/institutional/ContactSection";
 
 function EcosystemVisual() {
@@ -33,12 +34,7 @@ function EcosystemVisual() {
         UM ECOSSISTEMA. MÚLTIPLAS POSSIBILIDADES.
       </div>
       <div className="core">
-        <span className="core-mark">
-          o<span />
-        </span>
-        <span>
-          orvia<span className="core-tech">TECH</span>
-        </span>
+        <Brand />
       </div>
       <div className="satellite sat-products">
         <Blocks />
@@ -271,8 +267,14 @@ export default function Index() {
         </div>
       </section>
       <section className="section wrap about-section" id="sobre">
-        <div className="about-mark" aria-hidden="true">
-          o<span />
+        <div className="about-identity" aria-hidden="true">
+          <img
+            src="/lovable-uploads/cc08f24f-978d-4f55-82da-e1e65c5d6edc.png"
+            alt=""
+            width="426"
+            height="426"
+            loading="lazy"
+          />
         </div>
         <div>
           <SectionHeader

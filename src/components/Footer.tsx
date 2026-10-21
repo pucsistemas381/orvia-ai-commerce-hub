@@ -12,7 +12,7 @@ export default function Footer() {
             </Link>
             <p>Tecnologia que impulsiona negócios.</p>
             <span className="footer-note">
-              Software. Inteligência. Possibilidades.
+              Transformando tecnologia em direção estratégica.
             </span>
           </div>
           <div>
